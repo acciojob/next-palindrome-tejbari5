@@ -1,18 +1,18 @@
 function nextPalindrome(num) {
   //your JS code here.
-	let n=parseInt(num)
-	++n
-	while(!isPalindrome(n)){
-		++n
+	parseInt(num);
+	num++;
+	while(true){
+		if(num.toString()==num.toString().split("").reverse().join("")){
+			return num;
+		}else{
+			parseInt(num);
+			num++
+		}
 	}
-
-	return n;
-
-}
-
-function isPalindrome(num){
-	return num.toString() === num.toString().split('').reverse().join('');
 }
 
 const input = prompt("Enter a palindrome number");
-alert(nextPalindrome(input));
+alert(nextPalindrome(input));{
+
+}
